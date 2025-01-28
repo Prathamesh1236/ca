@@ -1,15 +1,11 @@
 #!/bin/bash
 sudo apt install openssl -y
-mkdir ca
 cd ca 
 mkdir -p certs crl newcerts private subca/csr subca/certs
 touch index.txt
 touch index.txt.attr
 echo '1000'>serial
 echo '1000'>crlnumber
-cd ..
-cp rootca.cnf /home/pratham/ca
-cd ca
 openssl genrsa -aes256 -out private/ca.key.pem 4096
 chmod 400 private/ca.key.pem
 echo 'key generated'
