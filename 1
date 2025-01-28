@@ -8,7 +8,7 @@ touch index.txt.attr
 echo '1000'>serial
 echo '1000'>crlnumber
 cd ..
-cp rootca.cnf /home/pratham/ca
+#cp rootca.cnf /home/pratham/ca
 cd ca
 openssl genrsa -aes256 -out private/ca.key.pem 4096
 chmod 400 private/ca.key.pem
